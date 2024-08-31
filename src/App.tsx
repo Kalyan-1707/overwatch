@@ -1,19 +1,19 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showSidebar, setShowSidebar] = useState(false)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+    <div className='App'>
+       <button className='side-bar-btn' onClick={() =>setShowSidebar(!showSidebar)}>
+           &lt;
+           </button>
+       {showSidebar && <header className="App-header">
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
+         
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
@@ -37,8 +37,9 @@ function App() {
             Vite Docs
           </a>
         </p>
-      </header>
+      </header>}
     </div>
+    </>
   )
 }
 

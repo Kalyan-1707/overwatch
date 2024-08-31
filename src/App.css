@@ -1,10 +1,15 @@
 .App {
-  text-align: center;
-  min-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
+.side-bar-btn{
+  background-color: white;
+  color: rgb(41,160,193);
+}
 .App-logo {
-  height: 40vmin;
+  height: 40vmin; 
   pointer-events: none;
 }
 
