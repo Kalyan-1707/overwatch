@@ -4,9 +4,12 @@
     align-items: center;
     height: 100vh;
   }
-  .side-bar-btn{
+  #side-bar-btn{
     background-color: white;
-    color: rgb(41,160,193);
+    color: darkviolet;
+    background-color: rgb(41,44,53);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .App-logo {
     height: 40vmin; 
@@ -20,14 +23,14 @@
   }
   
   .App-header {
+    position: relative;
     background-color: #282c34;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+    width: 500px;
   }
   
   .App-link {

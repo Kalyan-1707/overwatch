@@ -1,19 +1,28 @@
 import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import AppBar from "./components/AppBar/AppBar";
+import { IconButton } from "@mui/material";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 function App() {
-  const [showSidebar, setShowSidebar] = useState(false)
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <>
-    <div className='App'>
-       <button className='side-bar-btn' onClick={() =>setShowSidebar(!showSidebar)}>
-           &lt;
-           </button>
-       {showSidebar && <header className="App-header">
-        <p>Hello Overwatch</p>
-      </header>}
+      <div className="App">
+        <IconButton
+          id="side-bar-btn"
+          aria-label="side-bar-button"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
+          <AutoAwesomeIcon />
+        </IconButton>
+        {showSidebar && (
+          <header className="App-header">
+            <p>Hello Overwatch</p>
+            <AppBar />
+          </header>
+        )}
       </div>
     </>
   );
