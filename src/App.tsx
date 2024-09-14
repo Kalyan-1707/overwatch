@@ -3,6 +3,7 @@ import "./App.css";
 import AppBar from "./components/AppBar/AppBar";
 import { IconButton } from "@mui/material";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
+import SettingsPage from "./pages/Settings/SettingsPage";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -20,6 +21,7 @@ function App() {
         {showSidebar && (
           <header className="App-header">
             <p>Hello Overwatch</p>
+            <SettingsPage/>
             <AppBar />
           </header>
         )}
